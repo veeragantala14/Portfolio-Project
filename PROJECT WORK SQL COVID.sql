@@ -1,4 +1,10 @@
+select *
+from CovidDeaths
+where continent is not null
+order by 3,4
 
+
+---select Data that we are going to be using 
 
 select Location,date,total_cases, new_cases, total_deaths, population
 population from CovidDeaths
@@ -119,7 +125,5 @@ join CovidVaccinations  vac
      on dea.location = vac.location 
      and dea.date = vac.date
 where dea.continent is not null ;
-
-
 ----order by 1,2,3
 
